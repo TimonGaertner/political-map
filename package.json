@@ -1,0 +1,14 @@
+{
+    "name": "political-map",
+    "version": "1.0.0",
+    "scripts": {
+        "compile-tailwind": "postcss styles.postcss -o static/styles.css"
+    },
+    "license": "GPL-3.0",
+    "devDependencies": {
+        "autoprefixer": "^10.2.6",
+        "postcss": "^8.3.5",
+        "postcss-cli": "^8.3.1",
+        "tailwindcss": "^2.2.4"
+    }
+}

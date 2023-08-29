@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" class="w-full h-full">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Political Map</title>
+        <link rel="stylesheet" href="styles.css" />
+
+        <meta name="author" content="Lennard Walter, Timon Gärtner" />
+        <meta
+            name="description"
+            content="A page which shows a colorful world map visualizing different indices. For each country there is a lot of interesting information that you can read."
+        />
+
+        <meta property="og:title" content="Political Map" />
+        <meta
+            property="og:description"
+            content="A page which shows a colorful world map visualizing different indices. For each country there is a lot of interesting information that you can read."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/images/worldMap.png" />
+
+        <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+
+        <script src="https://cdn.jsdelivr.net/gh/jquery/jquery/dist/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/10bestdesign/jqvmap/dist/jquery.vmap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/10bestdesign/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/jquery/jquery-mousewheel/jquery.mousewheel.min.js"></script>
+    </head>
+
+    <body class="w-full h-full flex flex-row">
+        <div id="map" class="w-3/4 h-full"></div>
+        <div id="bar" class="w-1/4 h-full"></div>
+
+        <select
+            id="index-select"
+            class="card absolute left-3 top-3 outline-none focus-visible:outline-white"
+        >
+            <option value="pressFreedom">Press Freedom</option>
+            <option value="fragileStates">Fragile States</option>
+            <option value="globalPeace">Global Peace</option>
+            <option value="gdpPerCapita">GDP per capita</option>
+            <option value="population">Population</option>
+        </select>
+
+        <script src="dataset.js"></script>
+        <script src="helpers.js"></script>
+        <script src="buildHtml.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
